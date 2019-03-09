@@ -27,10 +27,6 @@ export class TemplateDrivenApproachComponent {
     console.log('Submited!');
     console.log(ngForm);
   }
-
-  public getEnumLabel(selectedEnum: AvailableCity | Gender, value: AvailableCity | Gender): string {
-    return Object.keys(selectedEnum).find(key => selectedEnum[key] === value);
-  }
 }
 
 

@@ -1,7 +1,7 @@
 export enum AvailableCity {
-  Kyiv,
-  Kharkiv,
-  Lviv,
-  Odessa
+  Kyiv = 'Kyiv',
+  Kharkiv = 'Kharkiv',
+  Lviv = 'Lviv',
+  Odessa = 'Odessa'
 }
 

@@ -45,9 +45,10 @@
     <div class="form-row">
       <label>City: </label>
       <select formControlName="city">
-        <option *ngFor="let iterationCity of parsedEnumLabels(availableCity)"
-                [value]="availableCity[iterationCity]">
-          {{iterationCity}}
+        <option [value]="availableCity.Kharkiv">{{availableCity.Kharkiv}}
+        <option [value]="availableCity.Kyiv">{{availableCity.Kyiv}}
+        <option [value]="availableCity.Lviv">{{availableCity.Lviv}}
+        <option [value]="availableCity.Odessa">{{availableCity.Odessa}}
         </option>
       </select>
     </div>
@@ -57,15 +58,13 @@
       <div class="radio-column">
         <input id="male" type="radio"
                formControlName="gender"
-               [value]="gender.Male"
-        >
+               [value]="gender.Male">
+        <label for="male">{{gender.Male}}</label>
 
-        <label for="male">Male</label>
         <input id="female" type="radio"
                formControlName="gender"
-               [value]="gender.Female"
-        >
-        <label for="female">Female</label>
+               [value]="gender.Female">
+        <label for="female">{{gender.Female}}</label>
       </div>
     </div>
 

@@ -52,10 +52,10 @@
     <div class="form-row">
       <label>City: </label>
       <select  [ngModel]="defaultUser.city" name="city">
-        <option [value]="availableCity.Kyiv">{{getEnumLabel(availableCity, availableCity.Kyiv)}}</option>
-        <option [value]="availableCity.Lviv">{{getEnumLabel(availableCity, availableCity.Lviv)}}</option>
-        <option [value]="availableCity.Kharkiv">{{getEnumLabel(availableCity, availableCity.Kharkiv)}}</option>
-        <option [value]="availableCity.Odessa">{{getEnumLabel(availableCity, availableCity.Odessa)}}</option>
+        <option [value]="availableCity.Kyiv">{{availableCity.Kyiv}}</option>
+        <option [value]="availableCity.Lviv">{{availableCity.Lviv}}</option>
+        <option [value]="availableCity.Kharkiv">{{availableCity.Kharkiv}}</option>
+        <option [value]="availableCity.Odessa">{{availableCity.Odessa}}</option>
       </select>
     </div>
 
@@ -68,7 +68,7 @@
           type="radio"
           name="gender"
           [value]="gender.Male">
-        <label for="male">{{getEnumLabel(gender, gender.Male)}}</label>
+        <label for="male">{{gender.Male}}</label>
 
         <input
           [ngModel]="defaultUser.gender"
@@ -76,7 +76,7 @@
           type="radio"
           name="gender"
           [value]="gender.Female">
-        <label for="female">{{getEnumLabel(gender, gender.Female)}}</label>
+        <label for="female">{{gender.Female}}</label>
       </div>
     </div>
 

@@ -20,6 +20,7 @@ export class DataDrivenApproachComponent {
   private readonly PASSWORD_MIN_LENGTH = 7;
 
   constructor(private formBuilder: FormBuilder) {
+    console.log(this.availableCity);
     this.buildForm();
 
     this.loginForm.valueChanges.subscribe(data => {
@@ -41,11 +42,6 @@ export class DataDrivenApproachComponent {
 
   public onSubmit() {
     console.log(this.loginForm);
-  }
-
-  public parsedEnumLabels(selectedEnum: AvailableCity | Gender): string[] {
-    const enumFullLength = Object.values(selectedEnum).length;
-    return Object.values(selectedEnum).slice(0, enumFullLength / 2);
   }
 
   public addPhone() {
