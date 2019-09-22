@@ -1,20 +1,9 @@
 import {FormControl, ValidationErrors} from '@angular/forms';
+import {Observable, of} from 'rxjs';
+import {delay} from 'rxjs/operators';
 
-export function asyncExample(control: FormControl): Promise<ValidationErrors> {
+export function asyncExample(control: FormControl): Observable<ValidationErrors> {
   console.log('HI SERVER!');
-
-  const promise = new Promise(resolve => {
-    setTimeout(() => {
-      if (control.value === 'Vlad') {
-        resolve({
-          asyncExample: true
-        });
-      } else {
-        resolve(null);
-      }
-    }, 2000);
-  });
-
-  return promise;
+  return of(control.value === 'Vlad' ? {asyncExample: true} : null).pipe(delay(1000));
 }
 
